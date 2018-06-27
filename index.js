@@ -6,6 +6,7 @@
 
 const serverless = require('serverless-http');
 const express = require('express');
+var axios = require('axios');
 const app = express();
 
 // http://json-schema-faker.js.org/
@@ -24,7 +25,7 @@ app.get('/users', (req, res) => {
 
 // localhost:3000/users/62156
 app.get('/users/:userId', function (req, res) {
-  let requestedUser = userData.find(obj => {return obj.id === parseInt(req.params.userId, 10)});
+  let requestedUser = userData.find(obj => { return obj.id === parseInt(req.params.userId, 10) });
 
   if (typeof requestedUser === 'object') {
     res.json(requestedUser)
