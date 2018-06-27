@@ -11,6 +11,9 @@
     "serverless-offline": "^3.25.4"
   },
   "scripts": {
+    "start": "sls offline start",
+    "dev": "sls deploy",
+    "prod": "sls deploy production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
